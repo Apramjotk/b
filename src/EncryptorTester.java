@@ -153,6 +153,7 @@ public class EncryptorTester
         Encryptor encryptorTest = new Encryptor(2, 3);
         String actualEncrypted1 = encryptorTest.encryptMessage("Meet at midnight");
         String expectedEncrypted1 = "Mte eati dmnitgAhA";
+
         if (actualEncrypted1.equals(expectedEncrypted1))
         {
             System.out.println("\nTest 1 PASSED!");
@@ -218,6 +219,12 @@ public class EncryptorTester
             System.out.println("EXPECTED: " + expectedEncrypted5);
             System.out.println("  ACTUAL: " + actualEncrypted5);
         }
+        Encryptor encryptorTest245 = new Encryptor(3, 4);
+        String actualEncrypted6 = encryptorTest245.encryptMessage("What are you doing next weekend?");
+        System.out.println("  ACTUAL: " + actualEncrypted6);
+        Encryptor encryptorTest246 = new Encryptor(6, 5);
+        String actualEncrypted7 = encryptorTest246.encryptMessage("This one time I was trying to do a handstand and fell backwards and landed on my shoe. It hurt! I won't try that again.");
+        System.out.println("  ACTUAL: " + actualEncrypted7);
 
 
     // -------------------------------------
@@ -288,6 +295,61 @@ public class EncryptorTester
       System.out.println("EXPECTED: " + expectedDecrypted6);
       System.out.println("  ACTUAL: " + actualDecrypted6);
     }
+        Encryptor encryptorTesterM34 = new Encryptor(3, 2);
+        String actualDecrypted67 = encryptorTesterM34.decryptMessage("Ti hsiscn ofietdnia!Bl e nto helo okotAu!A");
+        System.out.println("  ACTUAL: " + actualDecrypted67);
+        Encryptor encryptorTesterM35 = new Encryptor(5, 5);
+        String actualDecrypted68 = encryptorTesterM35.decryptMessage("Tite hsocmi presa es  stsaneregtd see J  nfaBidomonee  d ftm.cuhe alisBr,ssaieecgllstelft!  -rAwsduA");
+        System.out.println("  ACTUAL: " + actualDecrypted68);
+        Encryptor encryptorTesterM38 = new Encryptor(4, 5);
+        String actualDecrypted73 = encryptorTesterM38.encryptMessage("We just love the engine racing at night. Why not enjoy what you have. Do you want the cars to rot! Jealous people");
+        System.out.println("  ACTUAL: " + actualDecrypted73);
+        Encryptor encryptorTesterM37 = new Encryptor(6, 5);
+        String actualDecrypted70 = encryptorTesterM37.decryptMessage(actualDecrypted73);
+        System.out.println("  ACTUAL: " + actualDecrypted70);
+        System.out.println(" What are you doing\n");
+        System.out.println("Challenge shifting rows and columns :  ");
+        System.out.println();
+        System.out.println("Orignal 2d array:   ");
+
+        String[][] testcase = {{"Your", "name", "can"},
+                {"not be", "Apram", "mine"},
+                {"is", "stop", "stealing"}};
+        for (int i = 0; i <testcase.length; i++)
+        {
+            System.out.println(Arrays.toString(testcase[i]));
+        }
+        System.out.println();
+        System.out.println("Shifted 2d array:\n ");
+
+        Encryptor test = new  Encryptor (testcase);
+        test. rowShifted(2);
+        for (int i = 0; i <testcase.length; i++)
+        {
+            System.out.println(Arrays.toString(testcase[i]));
+        }
+        System.out.println();
+        test. colShifted(2);
+        for (int i = 0; i <testcase.length; i++)
+        {
+            System.out.println(Arrays.toString(testcase[i]));
+        }
+        System.out.println();
+        test. rowShifted(-3);
+        for (int i = 0; i <testcase.length; i++)
+        {
+            System.out.println(Arrays.toString(testcase[i]));
+        }
+        System.out.println();
+        test. colShifted(-3);
+        for (int i = 0; i <testcase.length; i++)
+        {
+            System.out.println(Arrays.toString(testcase[i]));
+        }
+        System.out.println();
+
+
+
 
     }
 
